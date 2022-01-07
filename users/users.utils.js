@@ -1,6 +1,7 @@
 import jwt from "jsonwebtoken";
 import client from "../client";
 
+
 export const getUser = async (token) => {
   try {
     if (!token) {
@@ -18,3 +19,15 @@ export const getUser = async (token) => {
     return null;
   }
 };
+
+export function protectedResolver(ourResolver){
+  return function(root,args,context,info) { //커링 기법
+    if(!context.loggedInUser){
+      return{
+        ok: false,
+        error: "로그인이 필요합니다"
+      };
+    }
+    return ourResolver(root,args,context,info);
+  };  
+}

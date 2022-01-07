@@ -7,6 +7,8 @@ export default gql`
     lastName: String
     username: String!
     email: String!
+    bio:  String
+    avarta: String
     createdAt: String!
   }
 `;

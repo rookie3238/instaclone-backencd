@@ -6,7 +6,7 @@
   "scripts": {
     "preinstall": "npx npm-force-resolutions",
     "dev": "nodemon --exec babel-node server --delay 2",
-    "magrate": "npx prisma migrate dev --preview-feature",
+    "migrate": "npx prisma migrate dev --preview-feature",
     "studio": "npx prisma studio"
   },
   "repository": {
@@ -23,6 +23,7 @@
     "@prisma/client": "^2.30.3",
     "apollo-server": "^2.25.2",
     "bcrypt": "^5.0.1",
+    "bcryptjs": "^2.4.3",
     "dotenv": "^10.0.0",
     "graphql": "^15.5.1",
     "graphql-tools": "^7.0.5",
