@@ -50,26 +50,3 @@ console.log(`Server: http://localhost:${PORT} ${apollo.graphqlPath}`);
 } 
 
 startApollo();
-
-
-/*
-const server = new ApolloServer({
-  resolvers,
-  typeDefs,
-  context: async ({ req }) => {
-    return {
-      loggedInUser: await getUser(req.headers.token),
-     };
-   },
- });
-
- await server.start(); 
-
- const app = express();
- app.use(logger("tiny"));
- server.applyMiddleware({ app });
- app.listen({ port: PORT }, () => {
-   console.log(`🚀Server is running on http://localhost:${PORT} ✅`);
- });
-
- */

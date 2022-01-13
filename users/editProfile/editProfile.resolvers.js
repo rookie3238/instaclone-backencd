@@ -10,7 +10,7 @@ console.log(process.cwd()); ////현재 디렉터리 표시(Current Working Direc
 
 const resolversfn = async (
   _,
-  {firstName, lastName, username, email, password, newPassword, bio, avatar},
+  {firstName, lastName, username, email, password: newPassword, bio, avatar},
   {loggedInUser},
 )=> {
   let avatarUrl = null;
