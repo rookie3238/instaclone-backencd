@@ -13,7 +13,7 @@ export default {
             }
             await client.user.update({
                 where : {
-                    id : loggedInUser,
+                    id : loggedInUser.id,
                 },
                 data: {
                   following: {
@@ -23,6 +23,10 @@ export default {
                   },  
                 },    
             });
+
+            return {
+                ok : true,
+            }
         }
     )
 
