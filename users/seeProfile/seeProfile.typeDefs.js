@@ -5,3 +5,4 @@ export default gql`
     seeProfile(username: String!): User
   }
 `;
+users / users.typeDefs.js;
