@@ -4,6 +4,7 @@ import client from "../client";
 
 export const getUser = async (token) => {
   try {
+//console.log(token);
     if (!token) {
       return null;
     }
